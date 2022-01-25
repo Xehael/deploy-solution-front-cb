@@ -9,7 +9,7 @@ function App() {
 
   async function getMessage() : Promise<void> {
 
-    fetch( `http://localhost:3000/message`, {
+    fetch(`${process.env.REACT_APP_API}/message`, {
     method: "GET",
     headers: {'Content-Type': 'application/json'},
     }).then( async (value: Response) => {
